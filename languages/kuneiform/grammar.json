@@ -1,0 +1,28 @@
+{
+    "scopeName": "source.kuneiform",
+    "patterns": [
+        {
+            "include": "#number"
+        },
+        {
+            "include": "#comment"
+        },
+        {
+            "include": "#keyword"
+        }
+    ],
+    "repository": {
+        "number": {
+            "match": "[0-9]+",
+            "name": "constant.numeric"
+        },
+        "comment": {
+            "match": "//.*$",
+            "name": "comment"
+        },
+        "keyword": {
+            "match": "(?i:\\b(database|action)\\b)",
+            "name": "keyword.other"
+        }
+    }
+}
